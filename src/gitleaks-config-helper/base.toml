@@ -1,0 +1,16 @@
+[[rules]]
+id = "GENERIC-KEY-ALL_FILES"
+description = "Generic API Key"
+regex = '''(?i)((api|token|secret|password)[a-z0-9_ .\-,]{0,25})(=|:|>|:=|\|\|:|<=|=>|:).{0,5}['\"]([0-9a-zA-Z\-_=]{5,64})['\"]'''
+entropy = 3
+
+[[rules]]
+id = "SHOPIFY-ACCESS-TOKEN-ALL_FILES"
+description = "Shopify access token"
+regex = '''shpat_[a-fA-F0-9]{32}'''
+
+[allowlist]
+description = "Allowlisted files"
+paths = ['''(.*?)(png|jpg|gif|tif|tiff|doc|docx|pdf|bin|xls|pyc|zip|toml|dll)$''']
+commits = []
+repos = []

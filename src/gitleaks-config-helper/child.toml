@@ -1,0 +1,8 @@
+[[rules]]
+id = "GENERIC-KEY-ALL_FILES"
+description = "Generic API Key"
+regex = '''(?i)((api|token|secret|password)[a-z0-9_ .\-,]{0,25})(=|:|>|:=|\|\|:|<=|=>|:).{0,5}['\"]([0-9a-zA-Z\-_=]{5,64})['\"]'''
+entropy = 3
+[rules.allowlist]
+description = "Allow some suspicious words and GUID"
+regexes = ['''[a-fA-F0-9]{2,12}\-[a-fA-F0-9]{2,12}\-[a-fA-F0-9]{2,12}\-[a-fA-F0-9]{2,12}\-[a-fA-F0-9]{2,12}''', '''(?i)(<add|umbraco|editor|error|xpath|default|key_id|alias|id|name|showPageCount|friend|mode|keyword|debug|HKEY)''']
