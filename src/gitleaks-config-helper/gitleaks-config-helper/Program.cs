@@ -44,7 +44,7 @@ namespace GitleaksConfigHelper
             return 0;
         }
 
-        public static void MergeConfigs(string baseConfig, string childConfig, string outFile)
+        private static void MergeConfigs(string baseConfig, string childConfig, string outFile)
         {
             // Parse files into a node
             using (StreamReader readerBase = File.OpenText(baseConfig))
@@ -78,7 +78,7 @@ namespace GitleaksConfigHelper
             }
         }
 
-        public static bool VerifyInput(string baseConfig, string childConfig, string outFile)
+        private static bool VerifyInput(string baseConfig, string childConfig, string outFile)
         {
             //Check if base file exists
             if (!File.Exists(baseConfig))
