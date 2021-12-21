@@ -2,7 +2,7 @@
 using System.IO;
 using Tommy;
 
-namespace ConsoleApp1
+namespace GitleaksConfigHelper
 {
     class Program
     {
